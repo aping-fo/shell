@@ -40,9 +40,7 @@ def combination_sum2(arr, target):
         for i in itertools.combinations(arr, size):  # 组合，不可重组自己
             s = sum(i)
             if s == target:
-                i = sorted(i)
-                if i not in res:
-                    res.append(i)
+                  res.append(i)
     return res
 
 
