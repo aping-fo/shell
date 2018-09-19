@@ -37,10 +37,25 @@ def array_sum_combinations(A, B, C, target):
     return res
 
 
+def loop(A, B, C, target):
+    res = []
+    for a in A:
+        for b in B:
+            if a + b > target:
+                continue
+            for c in C:
+                if a + b + c == target:
+                    res.append([a, b, c])
+
+    return res
+
+
 A = [1, 2, 3, 3]
 B = [2, 3, 3, 4]
 C = [2, 3, 3, 4]
-target = 7
+target = 8
 
 res = array_sum_combinations(A, B, C, target)
 print(res)
+res1 = loop(A, B, C, target)
+print(res1)
